@@ -1,0 +1,2285 @@
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160906153929)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "number" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160906153929"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateMatches (20160906154243)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "user_number" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160906154243"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2016-09-06 12:43:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 23ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-06 12:45:32 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2016-09-06 12:45:33 -0300
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.5ms)
+
+
+Started GET "/index" for ::1 at 2016-09-06 12:45:33 -0300
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-06 12:45:56 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 12:46:03 -0300
+
+SyntaxError (/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:21: syntax error, unexpected =>
+             render json: => {message: "Problem with the ...
+                            ^
+/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+...ge: "Problem with the server"}, :status => 500
+...                               ^):
+  app/controllers/users_controller.rb:21: syntax error, unexpected =>
+  app/controllers/users_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.6ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 12:46:45 -0300
+
+SyntaxError (/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+           render :json {message: "Problem with the pa...
+                         ^
+/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:24: syntax error, unexpected '}', expecting keyword_end
+...age: "Problem with the params"}, :status => 401
+...                               ^
+/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:27: syntax error, unexpected '{', expecting keyword_end
+         render :json {message: "User already exist"}, :status => 401
+                       ^
+/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+         render :json {message: "User already exist"}, :status => 401
+                                                     ^):
+  app/controllers/users_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+  app/controllers/users_controller.rb:24: syntax error, unexpected '}', expecting keyword_end
+  app/controllers/users_controller.rb:27: syntax error, unexpected '{', expecting keyword_end
+  app/controllers/users_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.5ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 12:47:32 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 660ms (Views: 656.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-06 12:47:33 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-06 12:47:33 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-06 12:47:33 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-06 12:47:33 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-06 12:47:33 -0300
+
+
+Started POST "/api/signup" for ::1 at 2016-09-06 12:48:52 -0300
+
+ActionController::RoutingError (uninitialized constant ApiController):
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.0ms)
+
+
+Started POST "/api/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 12:49:46 -0300
+
+ActionController::RoutingError (uninitialized constant ApiController):
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.6ms)
+
+
+Started POST "/api/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 12:50:20 -0300
+
+ActionController::RoutingError (uninitialized constant ApiController):
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.9ms)
+
+
+Started POST "/api/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 12:58:38 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/signup"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (137.3ms)
+
+
+Started POST "/users/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 12:58:45 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Rene", "number"=>"90754686", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.4ms)
+
+
+Started POST "/users/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 12:59:04 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Rene", "number"=>"90754686", "password"=>"[FILTERED]"}
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 12:59:13 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 12:59:53 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 13:00:14 -0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/signup?full_name=Rene&number=90754686&password=[FILTERED]" for ::1 at 2016-09-06 13:00:49 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Rene", "number"=>"90754686", "password"=>"[FILTERED]"}
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup?full_name=Rene&number=90754686&password=[FILTERED]&contacts=123-234-345" for ::1 at 2016-09-06 13:01:05 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Rene", "number"=>"90754686", "password"=>"[FILTERED]", "contacts"=>"123-234-345"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."number" = ?[0m  [["number", "90754686"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Rene"], ["number", "90754686"], ["password", "123123"], ["created_at", "2016-09-06 16:01:05.494978"], ["updated_at", "2016-09-06 16:01:05.494978"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_number", "90754686"], ["number", "123-234-345"], ["state", "-"], ["created_at", "2016-09-06 16:01:05.505686"], ["updated_at", "2016-09-06 16:01:05.505686"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 46ms (Views: 0.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-06 13:01:30 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/signup?full_name=Rene&number=90754686&password=[FILTERED]&contacts=123-234-345" for ::1 at 2016-09-06 13:03:42 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Rene", "number"=>"90754686", "password"=>"[FILTERED]", "contacts"=>"123-234-345"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."number" = ?  [["number", "90754686"]]
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signup?full_name=Martin%20&number=9123728&password=[FILTERED]&contacts=9872718-1238732" for ::1 at 2016-09-06 13:09:06 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Martin ", "number"=>"9123728", "password"=>"[FILTERED]", "contacts"=>"9872718-1238732"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."number" = ?[0m  [["number", "9123728"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Martin "], ["number", "9123728"], ["password", "password"], ["created_at", "2016-09-06 16:09:06.482971"], ["updated_at", "2016-09-06 16:09:06.482971"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_number", "9123728"], ["number", "9872718-1238732"], ["state", "-"], ["created_at", "2016-09-06 16:09:06.504259"], ["updated_at", "2016-09-06 16:09:06.504259"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/users/signup?full_name=Martin%20&number=9123728&password=[FILTERED]&contacts=9872718-1238732" for ::1 at 2016-09-06 13:20:51 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Martin ", "number"=>"9123728", "password"=>"[FILTERED]", "contacts"=>"9872718-1238732"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."number" = ?  [["number", "9123728"]]
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/signin?number=9123728" for ::1 at 2016-09-06 13:37:38 -0300
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"9123728"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "9123728"]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/signin?number=123123" for ::1 at 2016-09-06 13:38:47 -0300
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20160906235327)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20160906235327)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar, "number1" varchar, "number2" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160906235327"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/users/signup?number=123123" for ::1 at 2016-09-07 00:47:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signup as */*
+  Parameters: {"number"=>"123123"}
+Completed 401 Unauthorized in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-07 00:51:23 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2016-09-07 00:51:25 -0300
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.1ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-07 00:51:31 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 254ms (Views: 249.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-07 00:51:31 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-07 00:51:31 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-07 00:51:31 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-07 00:51:31 -0300
+
+
+Started POST "/users/signin?number=90754686" for ::1 at 2016-09-07 00:51:46 -0300
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"90754686"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "90754686"]]
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signup?full_name=Diego&number=123123&password=[FILTERED]&contacts=90754686-9123728" for ::1 at 2016-09-07 00:53:28 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Diego", "number"=>"123123", "password"=>"[FILTERED]", "contacts"=>"90754686-9123728"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."number" = ?[0m  [["number", "123123"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Diego"], ["number", "123123"], ["password", "hola123"], ["created_at", "2016-09-07 03:53:28.871636"], ["updated_at", "2016-09-07 03:53:28.871636"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_number", "123123"], ["number", "90754686-9123728"], ["state", "-"], ["created_at", "2016-09-07 03:53:28.886763"], ["updated_at", "2016-09-07 03:53:28.886763"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users/list_contacts?number=123123" for ::1 at 2016-09-07 00:53:55 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/index" for ::1 at 2016-09-07 00:54:43 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/signup?full_name=David&number=54321&password=[FILTERED]&contacts=12345" for ::1 at 2016-09-07 00:55:11 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"David", "number"=>"54321", "password"=>"[FILTERED]", "contacts"=>"12345"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."number" = ?  [["number", "54321"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["full_name", "David"], ["number", "54321"], ["password", "hola123"], ["created_at", "2016-09-07 03:55:11.806421"], ["updated_at", "2016-09-07 03:55:11.806421"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_number", "54321"], ["number", "12345"], ["state", "-"], ["created_at", "2016-09-07 03:55:11.817597"], ["updated_at", "2016-09-07 03:55:11.817597"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/users/signup?full_name=Pedro&number=12345&password=[FILTERED]&contacts=54321" for ::1 at 2016-09-07 00:55:25 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Pedro", "number"=>"12345", "password"=>"[FILTERED]", "contacts"=>"54321"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."number" = ?[0m  [["number", "12345"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Pedro"], ["number", "12345"], ["password", "hola123"], ["created_at", "2016-09-07 03:55:25.141913"], ["updated_at", "2016-09-07 03:55:25.141913"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_number", "12345"], ["number", "54321"], ["state", "-"], ["created_at", "2016-09-07 03:55:25.158609"], ["updated_at", "2016-09-07 03:55:25.158609"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/users/list_contacts?number=12345" for ::1 at 2016-09-07 00:55:32 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-07 23:05:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 25ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-07 23:05:51 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-07 23:05:52 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-07 23:05:52 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 235ms (Views: 231.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-09-07 23:05:52 -0300
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-07 23:05:53 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/signin" for 192.168.0.13 at 2016-09-07 23:11:28 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/api/signin"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.9ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:13:02 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+Completed 200 OK in 113ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:16:35 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:18:46 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:19:57 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:23:28 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:24:09 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:25:09 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:27:12 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:27:19 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (12.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 14ms (Views: 0.2ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/users/list_contacts?number=123123" for 127.0.0.1 at 2016-09-07 23:28:10 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/list_contacts?number=12345" for 127.0.0.1 at 2016-09-07 23:28:17 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/signup?full_name=Diego&number=989898&password=[FILTERED]&contacts=123123" for 127.0.0.1 at 2016-09-07 23:28:48 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Diego", "number"=>"989898", "password"=>"[FILTERED]", "contacts"=>"123123"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."number" = ?[0m  [["number", "989898"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("full_name", "number", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Diego"], ["number", "989898"], ["password", "hola123"], ["created_at", "2016-09-08 02:28:48.658144"], ["updated_at", "2016-09-08 02:28:48.658144"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "matches" ("user_number", "number", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_number", "989898"], ["number", "123123"], ["state", "-"], ["created_at", "2016-09-08 02:28:48.670134"], ["updated_at", "2016-09-08 02:28:48.670134"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/list_contacts?number=123123" for 127.0.0.1 at 2016-09-07 23:28:55 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/signup?full_name=Diego&number=989898&password=[FILTERED]&contacts=123123" for 127.0.0.1 at 2016-09-07 23:29:07 -0300
+Processing by UsersController#signup as */*
+  Parameters: {"full_name"=>"Diego", "number"=>"989898", "password"=>"[FILTERED]", "contacts"=>"123123"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."number" = ?  [["number", "989898"]]
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-07 23:29:23 -0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/list_contacts?number=123123" for 127.0.0.1 at 2016-09-07 23:31:21 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/list_contacts?number=12345" for 127.0.0.1 at 2016-09-07 23:31:25 -0300
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:31:35 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:31:42 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:31:48 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:31:49 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:31:58 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:32:07 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:33:11 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:34:54 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:36:55 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:39:44 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:40:23 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:40:59 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:42:08 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-07 23:42:20 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:44:22 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:44:24 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:44:25 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:48:48 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:48:52 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:49:32 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:50:44 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/mensaje" for 192.168.0.13 at 2016-09-07 23:50:56 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/users/mensaje"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.2ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:52:12 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/messages" for 192.168.0.13 at 2016-09-07 23:52:17 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/users/messages"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.0ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-07 23:53:18 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/messages" for 192.168.0.13 at 2016-09-07 23:53:22 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/users/messages"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/reneacunahernandez/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.9ms)
+
+
+Started POST "/users/messages" for 192.168.0.13 at 2016-09-07 23:54:12 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#messages as */*
+  Parameters: {"message"=>"hola", "number"=>"12345", "contact"=>"54321", "user"=>{"number"=>"12345"}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms)
+
+NameError (undefined local variable or method `mensaje' for #<UsersController:0x007fb4a91027b8>):
+  app/controllers/users_controller.rb:64:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.1ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-07 23:55:53 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+NameError (undefined local variable or method `mensaje' for #<UsersController:0x007fb4a367c438>):
+  app/controllers/users_controller.rb:64:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (164.2ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-07 23:56:06 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `mensaje' for #<UsersController:0x007fb4a3cbb150>):
+  app/controllers/users_controller.rb:64:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.5ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-07 23:56:11 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 02:56:11.188993"], ["updated_at", "2016-09-08 02:56:11.188993"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users/messages" for 192.168.0.13 at 2016-09-07 23:56:19 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#messages as */*
+  Parameters: {"message"=>"hola", "number"=>"12345", "contact"=>"54321", "user"=>{"number"=>"12345"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 02:56:19.375897"], ["updated_at", "2016-09-08 02:56:19.375897"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 00:05:44 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:08:48 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:08:48.624279"], ["updated_at", "2016-09-08 03:08:48.624279"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.3ms)
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:76:in `send_message'
+  app/controllers/users_controller.rb:65:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:10:22 -0300
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (131.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:13:23 -0300
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.1ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:13:36 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:13:36.495734"], ["updated_at", "2016-09-08 03:13:36.495734"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.0ms)
+
+NameError (uninitialized constant UsersController::Houston):
+  app/controllers/users_controller.rb:77:in `send_message'
+  app/controllers/users_controller.rb:66:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (138.7ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:14:48 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:14:48.066030"], ["updated_at", "2016-09-08 03:14:48.066030"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.0ms)
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:77:in `send_message'
+  app/controllers/users_controller.rb:66:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.2ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:16:41 -0300
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.7ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:18:19 -0300
+
+LoadError (cannot load such file -- houston):
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.7ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:38:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:38:10.722130"], ["updated_at", "2016-09-08 03:38:10.722130"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.4ms)
+
+NameError (uninitialized constant UsersController::APNS):
+  app/controllers/users_controller.rb:80:in `send_message'
+  app/controllers/users_controller.rb:68:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (150.9ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:38:58 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:38:58.542959"], ["updated_at", "2016-09-08 03:38:58.542959"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.7ms)
+
+NameError (uninitialized constant UsersController::APNS):
+  app/controllers/users_controller.rb:80:in `send_message'
+  app/controllers/users_controller.rb:68:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.1ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.3ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:39:47 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:39:47.502521"], ["updated_at", "2016-09-08 03:39:47.502521"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.2ms)
+
+NameError (uninitialized constant UsersController::APN):
+  app/controllers/users_controller.rb:114:in `send_message'
+  app/controllers/users_controller.rb:68:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (131.2ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:40:33 -0300
+
+SyntaxError (/Users/reneacunahernandez/Desktop/Mecolab-2016/WhatsappServer/app/controllers/users_controller.rb:96: dynamic constant assignment
+   APN = Houston::Client.development
+        ^):
+  app/controllers/users_controller.rb:96: dynamic constant assignment
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:43:53 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:43:53.708310"], ["updated_at", "2016-09-08 03:43:53.708310"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 1168ms (Views: 0.3ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:47:44 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:47:44.873770"], ["updated_at", "2016-09-08 03:47:44.873770"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Completed 200 OK in 1068ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 00:48:13 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:48:21 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:48:21.406663"], ["updated_at", "2016-09-08 03:48:21.406663"]]
+  [1m[35m (12.1ms)[0m  commit transaction
+Completed 200 OK in 583ms (Views: 0.2ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 00:50:38 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:50:56 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:50:56.870475"], ["updated_at", "2016-09-08 03:50:56.870475"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Completed 200 OK in 1826ms (Views: 0.2ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:52:28 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:52:28.589740"], ["updated_at", "2016-09-08 03:52:28.589740"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 585ms (Views: 0.2ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 00:55:01 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 03:55:01.745675"], ["updated_at", "2016-09-08 03:55:01.745675"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 200 OK in 601ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:30:55 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:34:45 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:35:06 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:35:07 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-08 01:35:16 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "123123"]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:36:52 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:36:55 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"123123", "user"=>{"number"=>"123123"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "123123"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '123123') AND user_number == '123123'))[0m
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-08 01:36:59 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:37:02 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:44:21 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:45:11 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:45:25 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:46:03 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:47:19 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:50:56 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:50:58 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 01:51:28 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 02:03:03 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 02:07:25 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 02:07:53 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 02:09:55 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 02:13:01 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 10:33:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 13:33:47.185734"], ["updated_at", "2016-09-08 13:33:47.185734"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 10:39:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 23ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 10:39:09 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-08 10:39:12 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 236ms (Views: 232.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-08 10:39:14 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 10:39:38 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=hola" for 127.0.0.1 at 2016-09-08 10:39:47 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"hola"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "hola"], ["created_at", "2016-09-08 13:39:47.597344"], ["updated_at", "2016-09-08 13:39:47.597344"]]
+  [1m[35m (12.1ms)[0m  commit transaction
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2016-09-08 10:40:20 -0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=Cristian%20Chuapala" for 127.0.0.1 at 2016-09-08 10:47:35 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"Cristian Chuapala"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "Cristian Chuapala"], ["created_at", "2016-09-08 13:47:35.761731"], ["updated_at", "2016-09-08 13:47:35.761731"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=Cristian%20Chuapala" for 127.0.0.1 at 2016-09-08 10:48:15 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"Cristian Chuapala"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["number1", "12345"], ["number2", "54321"], ["message", "Cristian Chuapala"], ["created_at", "2016-09-08 13:48:15.256329"], ["updated_at", "2016-09-08 13:48:15.256329"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 7.5ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /Mecolab.pem):
+  app/controllers/users_controller.rb:97:in `read'
+  app/controllers/users_controller.rb:97:in `send_message'
+  app/controllers/users_controller.rb:68:in `messages'
+
+
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.0ms)
+
+
+Started POST "/users/messages?number=12345&contact=54321&message=Cristian%20Chuapala" for 127.0.0.1 at 2016-09-08 10:48:43 -0300
+Processing by UsersController#messages as */*
+  Parameters: {"number"=>"12345", "contact"=>"54321", "message"=>"Cristian Chuapala"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("number1", "number2", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["number1", "12345"], ["number2", "54321"], ["message", "Cristian Chuapala"], ["created_at", "2016-09-08 13:48:43.948286"], ["updated_at", "2016-09-08 13:48:43.948286"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 10:51:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/reneacunahernandez/.rvm/gems/ruby-2.2.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 24ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:01:31 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:18:10 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:19:00 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:19:14 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/signin" for 192.168.0.13 at 2016-09-08 23:19:22 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:21:18 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:22:20 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:23:05 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:23:32 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:27:22 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:32:11 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["number", "12345"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/list_contacts" for 192.168.0.13 at 2016-09-08 23:32:27 -0300
+Cannot render console from 192.168.0.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#list_contacts as */*
+  Parameters: {"number"=>"12345", "user"=>{"number"=>"12345"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."number" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["number", "12345"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (number IN (SELECT number FROM matches WHERE number IN (SELECT user_number FROM matches WHERE number == '12345') AND user_number == '12345'))[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
